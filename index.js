@@ -1,12 +1,18 @@
 /// Iteration 2: getMaxNum
 
-/* Your code goes here */
+function getMaxNum(numberArr){
+    const maxArr = numberArr.reduce(function(a, b)){
+        return Math.max(a, b)
+    }
+}
+
+
 
 // Iteration 2 tests:
-// console.log(getMaxNum([45, 67, 12, 34])) // Should return 67
+console.log(getMaxNum([45, 67, 12, 34])) // Should return 67
 // console.log(getMaxNum(['hello', [0, 1, 2], 34, 45, 12, 0])) // Should return 45
 
-
+h1.font
 
 
 /// Iteration 3: changeItem
