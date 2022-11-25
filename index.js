@@ -79,18 +79,28 @@ console.log(orderByDate(importantDates)) // Should return them ordered 2013, 201
 /// Iteration 5: new machine gun
 
 class Weapon {
-    constructor (type, power, ammo = 10){
-        this.type = type;
-        this.power = power;
-        this.ammo = ammo;
-    } 
-    shoot(){
-        this.intervalId = setInterval
-        if (this.ammo > 0){
-            this.ammo--;
-        }
-    }
+  constructor(type, power, ammo = 10) {
+      this.type = type,
+      this.power = power,
+      this.ammo = ammo,
+      this.shootingInterval = undefined
+  }
 
+  shoot() {
+     this.shootingInterval = setInterval(() => {
+      this.ammo--;
+     }, 30)
+  }
+
+  stopShooting(){
+     clearInterval(this.shootingInterval);
+  }
+
+  reload(bullets){
+     setTimeout (() =>{
+      this.ammo += bullets
+     }, 2000)
+  }
 }
 
 // Iteration 5 tests
